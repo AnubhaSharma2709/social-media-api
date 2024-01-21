@@ -65,7 +65,7 @@ class HelloViewSet(viewsets.ViewSet):
     
     def create (self, request):
         """Create a new hello message"""
-        serializer = self.serialzier_class(data=request.data)
+        serializer = self.serializer_class(data=request.data)
         
         if serializer.is_valid():
             name = serializer.validated_data.get('name')
@@ -77,10 +77,19 @@ class HelloViewSet(viewsets.ViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
             
-    def retrieve(self,request,pk=None):
+    def retrieve(self, request, pk=None):
         """handle getting an obj by its ID"""
         return Response({'http_method':'GET'})
     
-    def update(self,request,pk=None):
+    def update(self, request, pk=None):
         """Handle updating an object"""
         return Response({'http_method':'PUT'})
+    
+    def partial_update(self, request, pk=None):
+        """ Handling updating part of an object"""
+        return Response({'http_method':'PATCH'})
+    
+    def destroy(self, request, pk=None):
+        """ Handle removing an object """
+        return Response({'http_method':'Delete'})
+        
