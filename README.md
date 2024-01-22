@@ -4,7 +4,7 @@ This repository contains the codebase for the completion of the course "Build a 
 
 ## Certificate of Completion 🎓🏆
 
-![Certificate of Completion](certificate_image.jpg)
+![Certificate of Completion](certificate.jpg)
 
 This certificate verifies that Anubha Sharma successfully completed the course on 01/22/2024. The certificate indicates that the entire course was completed as validated by the student. The course duration represents the total video hours of the course at the time of the most recent completion.
 
