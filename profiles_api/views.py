@@ -110,9 +110,9 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     """Handle creating, creating, and updating profiles"""
     serializer_class = serializers.UserProfileSerializer
     queryset = models.UserProfile.objects.all()
-    authentication_classes = (TokenAuthentication, )  # Corrected the typo from 'authentication_class' to 'authentication_classes'
+    authentication_classes = (TokenAuthentication, )  
     permission_classes = (permissions.UpdateOwnProfile, )
-    filter_backends = (filters.SearchFilter, )  # Corrected the typo from 'filter.SearchFilter' to 'filters.SearchFilter'
+    filter_backends = (filters.SearchFilter, )  
     search_fields = ('name', 'email', )
 
 class UserLoginApiView(ObtainAuthToken):
